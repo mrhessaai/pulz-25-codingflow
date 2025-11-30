@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Hessa - Squid Game Videos | Best Squid Game Content on YouTube</title>
+    <meta name="description" content="Mr Hessa uploads the best Squid Game videos, challenges, and edits inspired by the show. Subscribe for the latest Squid Game content!">
+    <meta name="keywords" content="Mr Hessa, Squid Game, YouTube, videos, challenges, edits, Korean drama">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --squid-red: #FF4757;
+            --squid-green: #2ED573;
+            --squid-pink: #FF6B9D;
+            --dark-bg: #0D1117;
+            --darker-bg: #010409;
+            --white: #FFFFFF;
+            --gray-light: #F8F9FA;
+            --gray-dark: #495057;
+            --shadow-light: rgba(255, 71, 87, 0.2);
+            --shadow-green: rgba(46, 213, 115, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--white);
+            background: var(--dark-bg);
+            overflow-x: hidden;
+            transition: all 0.3s ease;
+        }
+
+        body.light-mode {
+            color: var(--dark-bg);
+            background: var(--gray-light);
+        }
+
+        /* Navigation */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 0;
+            z-index: 1000;
+            transition: .3s;
+            background: rgba(13,17,23,0.35);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        body.light-mode nav {
+            background: rgba(248, 249, 250, 0.95);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--squid-red);
+            text-decoration: none;
+            position: relative;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--squid-green);
+            transition: width 0.3s ease;
+        }
+
+        .logo:hover::after {
+            width: 100%;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        body.light-mode .nav-links a {
+            color: var(--dark-bg);
+        }
+
+        .nav-links a:hover {
+            color: var(--squid-red);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--squid-green);
+            color: var(--squid-green);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle:hover {
+            background: var(--squid-green);
+            color: var(--dark-bg);
+        }
+
+        /* Hero Section */
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+            overflow: hidden;
+        }
+
+        body.light-mode .hero {
+            background: linear-gradient(135deg, var(--gray-light) 0%, var(--white) 100%);
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--squid-red), var(--squid-pink), var(--squid-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                filter: drop-shadow(0 0 20px var(--shadow-light));
+            }
+            to {
+                filter: drop-shadow(0 0 30px var(--shadow-green));
+            }
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--gray-dark);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--squid-red);
+            color: var(--white);
+            box-shadow: 0 10px 30px var(--shadow-light);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px var(--shadow-light);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--squid-green);
+            border: 2px solid var(--squid-green);
+        }
+
+        .btn-secondary:hover {
+            background: var(--squid-green);
+            color: var(--dark-bg);
+            transform: translateY(-3px);
+        }
+
+        /* Geometric Shapes */
+
+        .geometric-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.1;
+        }
+
+        .shape {
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--squid-red);
+            top: 20%;
+            left: 10%;
+            animation-delay: -1s;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 87px solid var(--squid-green);
+            top: 60%;
+            right: 15%;
+            animation-delay: -2s;
+        }
+
+        .square {
+            width: 80px;
+            height: 80px;
+            background: transparent;
+            border: 3px solid var(--squid-pink);
+            top: 40%;
+            right: 30%;
+            animation-delay: -3s;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+
+        /* Featured Video */
+
+        .featured-video {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--squid-red);
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: scale(1.02);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, var(--squid-red), var(--squid-pink));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--squid-red);
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            background: var(--white);
+        }
+
+        /* Video Gallery */
+
+        .video-gallery {
+            padding: 5rem 2rem;
+            background: var(--darker-bg);
+        }
+
+        body.light-mode .video-gallery {
+            background: var(--white);
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .video-card {
+            background: var(--dark-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        body.light-mode .video-card {
+            background: var(--gray-light);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--squid-red);
+            box-shadow: 0 20px 40px rgba(255, 71, 87, 0.3);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, var(--squid-green), var(--squid-pink));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 600;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .video-info {
+            padding: 1.5rem;
+        }
+
+        .video-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        body.light-mode .video-title {
+            color: var(--dark-bg);
+        }
+
+        .video-description {
+            color: var(--gray-dark);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* About Section */
+
+        .about {
+            padding: 5rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--gray-dark);
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--squid-red);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background: var(--squid-green);
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section */
+
+        .contact {
+            padding: 5rem 2rem;
+            background: var(--darker-bg);
+        }
+
+        body.light-mode .contact {
+            background: var(--gray-light);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--squid-red);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 1rem;
+            border: 2px solid var(--gray-dark);
+            border-radius: 10px;
+            background: var(--dark-bg);
+            color: var(--white);
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        body.light-mode .form-group input,
+        body.light-mode .form-group textarea {
+            background: var(--white);
+            color: var(--dark-bg);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--squid-green);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Newsletter */
+
+        .newsletter {
+            padding: 3rem 2rem;
+            background: var(--squid-red);
+            text-align: center;
+        }
+
+        .newsletter h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .newsletter p {
+            margin-bottom: 2rem;
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background: var(--squid-green);
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--dark-bg);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+
+        footer {
+            background: var(--darker-bg);
+            padding: 2rem;
+            text-align: center;
+            border-top: 3px solid var(--squid-red);
+        }
+
+        body.light-mode footer {
+            background: var(--dark-bg);
+        }
+
+        /* Mobile Menu */
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        body.light-mode .mobile-menu-btn {
+            color: var(--dark-bg);
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--dark-bg);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+            }
+            body.light-mode .nav-links {
+                background: var(--gray-light);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .newsletter-form {
+                flex-direction: column;
+            }
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Scroll animations */
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav style="background: rgba(13, 17, 23, 0.98);">
+        <div class="nav-container">
+            <a href="https://www.youtube.com/@hsda4517" class="logo">MR HESSA</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="geometric-shapes">
+            <div class="shape circle" style="transform: translate(2.694px, -1.16114px);"></div>
+            <div class="shape triangle" style="transform: translate(5.38799px, -2.32227px);"></div>
+            <div class="shape square" style="transform: translate(8.08199px, -3.48341px);"></div>
+        </div>
+        <div class="hero-content fade-in">
+            <h1>MR HESSA</h1>
+            <p>The ultimate destination for Squid Game & Weak Hero Class content. editz, and exclusive videos inspired by the hit series.</p>
+            <div class="cta-buttons">
+
+                <a href="https://www.youtube.com/@hsda4517" class="btn btn-secondary">View Channel</a>
+            </div>
+        </div>
+    </section>
+
+
+        </div>
+    </section>
+
+    <section id="about" class="about animate-on-scroll animated">
+        <h2 class="section-title">About Mr Hessa</h2>
+        <p>Mr Hessa uploads the best Squid Game editz and Weak Hero Class Editz inspired by the show. Subscribe Our Channel Now!</p>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@hsda4517?sub_conformation=1" class="social-btn"> Subscribe Now </a>
+
+
+
+        </div>
+    </section>
+
+    <section class="newsletter animate-on-scroll animated">
+        <h3>Never Miss a Powerful Edit</h3>
+        <p>Get notified when new Editz are uploaded! <br> Subscribe and Click The Bell Icon Now...</p>
+
+    </section>
+
+    <section id="contact" class="contact animate-on-scroll animated">
+        <div class="contact-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p style="text-align: center; color: var(--gray-dark); margin-bottom: 2rem;">
+     
+            </p>
+
+        </div>
+        <div class="form-group">
+            <label for="email">Email :<br> mrhessaai@gmail.com</label>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="whatsapp">WhatsApp :<br> +94 75 299 2347</label>
+        </div>
+
+        </div>
+        </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Mr Hessa. All rights reserved. | The Creator /Editor : Hesandu Subasith</p>
+    </footer>
+
+    <script>
+        function initThemeToggle() {
+            const themeToggle = document.getElementById('themeToggle');
+            const body = document.body;
+
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            if (savedTheme === 'light') {
+                body.classList.add('light-mode');
+            }
+
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('light-mode');
+                const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+                localStorage.setItem('theme', currentTheme);
+            });
+        }
+
+        function initMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        function initSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+
+        function initScrollAnimations() {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+
+
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            alert(`📧 Thanks for subscribing with ${email}!\n\nYou'll be notified of new Squid Game videos!`);
+            event.target.reset();
+        }
+
+        function submitContact(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const name = formData.get('name');
+            alert(`✉️ Thanks ${name}! Your message has been sent.\n\nWe'll get back to you soon!`);
+            event.target.reset();
+        }
+
+        function initNavbarScroll() {
+            const nav = document.querySelector('nav');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    nav.style.background = document.body.classList.contains('light-mode') ?
+                        'rgba(248, 249, 250, 0.98)' :
+                        'rgba(13, 17, 23, 0.98)';
+                } else {
+                    nav.style.background = document.body.classList.contains('light-mode') ?
+                        'rgba(248, 249, 250, 0.95)' :
+                        'rgba(13, 17, 23, 0.95)';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadVideos();
+            initThemeToggle();
+            initMobileMenu();
+            initSmoothScrolling();
+            initScrollAnimations();
+            initNavbarScroll();
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            const shapes = document.querySelectorAll('.shape');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.5;
+                const xOffset = (mouseX - 0.5) * speed * 20;
+                const yOffset = (mouseY - 0.5) * speed * 20;
+                shape.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            createParticles(e.clientX, e.clientY);
+        });
+
+        function createParticles(x, y) {
+            const colors = ['var(--squid-red)', 'var(--squid-green)', 'var(--squid-pink)'];
+
+            for (let i = 0; i < 6; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'fixed';
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+                particle.style.width = '4px';
+                particle.style.height = '4px';
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                particle.style.borderRadius = '50%';
+                particle.style.pointerEvents = 'none';
+                particle.style.zIndex = '9999';
+
+                document.body.appendChild(particle);
+
+                const angle = (Math.PI * 2 * i) / 6;
+                const velocity = 100;
+                const vx = Math.cos(angle) * velocity;
+                const vy = Math.sin(angle) * velocity;
+
+                let startTime = null;
+
+                function animate(currentTime) {
+                    if (!startTime) startTime = currentTime;
+                    const elapsed = currentTime - startTime;
+                    const progress = elapsed / 1000;
+
+                    if (progress < 1) {
+                        const currentX = x + vx * progress;
+                        const currentY = y + vy * progress + 0.5 * 300 * progress * progress;
+                        const opacity = 1 - progress;
+
+                        particle.style.left = currentX + 'px';
+                        particle.style.top = currentY + 'px';
+                        particle.style.opacity = opacity;
+
+                        requestAnimationFrame(animate);
+                    } else {
+                        particle.remove();
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
+        }
+
+        function addVideoCardAnimations() {
+            const videoCards = document.querySelectorAll('.video-card');
+            videoCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.classList.add('fade-in');
+            });
+        }
+
+        function initThemeToggle() {
+            const themeToggle = document.getElementById('themeToggle');
+            const body = document.body;
+
+            let savedTheme = 'dark';
+            try {
+                savedTheme = localStorage.getItem('theme') || 'dark';
+            } catch (e) {
+            }
+
+            if (savedTheme === 'light') {
+                body.classList.add('light-mode');
+            }
+
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('light-mode');
+                const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark';
+
+                try {
+                    localStorage.setItem('theme', currentTheme);
+                } catch (e) {
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadVideos();
+            addVideoCardAnimations();
+            initThemeToggle();
+            initMobileMenu();
+            initSmoothScrolling();
+            initScrollAnimations();
+            initNavbarScroll();
+        });
+    </script>
+
+</body>
+
+</html>
