@@ -1207,14 +1207,6 @@ document.getElementById('hamburger').addEventListener('click',function(){this.cl
 document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',function(){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active');});});
  
 /* ── VIDEO GRID ── */
-const videos=[
-  {title:'Pennywise — The Terror of Derry',desc:'Ultimate Pennywise transformation edit — atmospheric cuts and eerie sound design.',emoji:'🤡',cat:'horror',badge:'badge-horror',badgeTxt:'HORROR',views:'12.4K',dur:'2:47'},
-  {title:"Losers' Club — Alternate Timeline",desc:'What if the Losers had faced IT differently? Reimagined scenes and interactions.',emoji:'🎈',cat:'it',badge:'badge-it',badgeTxt:'IT UNIVERSE',views:'8.9K',dur:'3:12'},
-  {title:'Welcome to Derry — Dark Edit',desc:'The prequel series brought to life through rapid cuts and horror ambiance.',emoji:'🩸',cat:'horror',badge:'badge-horror',badgeTxt:'HORROR',views:'15.2K',dur:'1:58'},
-  {title:'Squid Game — Red Light Green Light',desc:'The iconic game reimagined with cinematic flair and intense sound effects.',emoji:'🦑',cat:'squid',badge:'badge-squid',badgeTxt:'SQUID GAME',views:'22.1K',dur:'2:31'},
-  {title:'IT — Chapter 3 Fan Concept',desc:'A cinematic fan-made concept for what Chapter 3 could look like.',emoji:'🎭',cat:'it',badge:'badge-it',badgeTxt:'IT UNIVERSE',views:'9.3K',dur:'4:05'},
-  {title:'Squid Game S2 — Final Edit',desc:'Season 2 highlight reel with explosive editing and perfect music sync.',emoji:'⬛',cat:'squid',badge:'badge-squid',badgeTxt:'SQUID GAME',views:'18.7K',dur:'3:22'},
-];
 document.getElementById('videoGrid').innerHTML=videos.map(v=>`
   <div class="vid-card reveal-up" onclick="window.open('https://www.youtube.com/@hsda4517','_blank')">
     <div class="vid-thumb">
